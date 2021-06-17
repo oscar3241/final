@@ -1,0 +1,337 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 22px Simonson;
+	color: #555;
+}
+
+nav {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+a:hover {
+	opacity: 0.5;
+}
+
+/*header*/
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
+}
+header h2{
+	font-family: 'Quicksand', sans-serif;
+}
+
+header nav{
+	display: flex;
+}
+
+header nav li{
+	margin: 0 15px;
+}
+
+header nav li:first-child{
+	margin-left: 0;
+}
+
+header nav li:last-child{
+	margin-right: 0;
+}
+
+
+@media (max-width: 700px) {
+	header {
+		flex-direction: column;
+	}
+	header h2 {
+		margin-bottom: 15px;
+	}
+}
+
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 100px;
+}
+@media (max-width: 1000px) {
+	section {
+		padding: 100px 50px;
+	}
+}
+@media (max-width: 600px) {
+	section {
+		padding: 80px 30px;
+	}
+}
+
+.fondo {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.fondo .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: #2196F3;
+	z-index: -1;
+}
+
+.fondo .background-image:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.65;
+}
+
+.fondo h1 {
+	font: bold 60px 'Open Sans', Sans-serif;
+	margin-bottom: 15px;
+}
+.fondo h3 {
+	font: normal 28px 'Open Sans', Sans-serif;
+	margin-bottom: 40px;
+	color: white;
+}
+
+@media (max-width: 600px) {
+	.fondo {
+		min-height: 600px;
+	}
+	.fondo h1 {
+		font-size: 48px; 
+	}
+	.fondo h3 {
+		font-size: 22px;
+	}
+	.fondo a.btn {
+		padding: 15px 40px;
+	}
+}
+
+a.btn {
+	color: white;
+	border-radius: 4px;
+	background-color: #7673B3;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	padding: 20px 55px;
+}
+
+hr {
+	width: 60%;
+	height: 5px;
+	background-color: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,c0c0c0+24,000000+50,c0c0c0+79,ffffff+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(left,  #ffffff 0%, #c0c0c0 24%, #000000 50%, #c0c0c0 79%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #ffffff 0%,#c0c0c0 24%,#000000 50%,#c0c0c0 79%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #ffffff 0%,#c0c0c0 24%,#000000 50%,#c0c0c0 79%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+;
+	border: 0;
+	margin-bottom: 80px;
+}
+
+section h3 {
+	color: #414a4f;
+	text-transform: capitalize;
+	font: bold 32px 'Open Sans', Sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+}
+section p {
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+
+ul {
+	list-style: none;
+}
+ul.grid {
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.bandas {
+	background-color: white;
+}
+.bandas .grid li {
+	padding: 20px;
+	height: 350px;
+	border-radius: 3px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+	background-color: #333;
+}
+
+.bandas .grid li.small {
+	flex-basis: 40%;
+}
+.bandas .grid li.large {
+	flex-basis: 60%;
+}
+
+@media (max-width: 1000px) {
+	.bandas .grid li.small, .bandas .grid li.large {
+		flex-basis: 100%;
+	}
+}
+
+
+.letras {
+	background-color: #000000;
+}
+
+.letras .quote {
+	text-align: center;
+	width: 80%;
+	font-style: italic;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 1.5;
+	padding: 0;
+}
+
+.letras .autor {
+	width: 80%;
+	font-size: 20px;
+	margin-left: auto;
+	font-weight: bolder;
+}
+
+@media (max-width: 1000px) {
+	.letras .quote {
+		font-size: 18px;
+	}
+	.letras .autor {
+		font-size: 15px;
+	}
+}
+
+
+
+.musicos .grid li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+}
+
+.musicos .grid li i {
+	font-size: 50px;
+	color: cyan;
+	margin-bottom: 25px;
+}
+
+.musicos .grid li h4 {
+	color: gray;
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.musicos .grid li p {
+	margin: 0;
+}
+
+@media (max-width: 1000px) {
+	.musicos .grid li {
+		flex-basis: 75%;
+		margin-bottom: 65px;
+	}
+}
+
+@media (max-width: 600px) {
+	.musicos .grid li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+}
+
+.subs {
+	background-color: #c7c7c7;
+}
+
+.subs form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 800px;
+	width: 80%;
+}
+
+.subs form input {
+	padding: 15px;
+	margin-right: 30px;
+	font-size: 20px;
+	color: #555;
+	flex: 1;
+}
+
+.subs form .btn {
+	padding: 20px 40px;
+}
+
+@media (max-width: 600px) {
+	.subs form input {
+		flex-basis: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	padding: 60px 0;
+}
+
+footer ul {
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+
+footer ul li {
+	margin: 0 10px;
+}
